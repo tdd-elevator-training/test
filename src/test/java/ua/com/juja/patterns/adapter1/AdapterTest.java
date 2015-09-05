@@ -5,14 +5,14 @@ import static org.mockito.Mockito.*;
 
 import static org.junit.Assert.assertEquals;
 
-/**
+/**sdf
  * Created by oleksandr.baglai on 19.08.2015.
  */
 public class AdapterTest {
-    @Test
+    @Testf
     public void test() {
         // given
-        Adaptee adaptee = mock(Adaptee.class);
+        Adaptee adaptee = mock(Adaptee.class);sdf
         when(adaptee.specificRequest(anyObject())).thenReturn("data from adaptee");
 
         Target target = new Adapter(adaptee);
@@ -20,7 +20,7 @@ public class AdapterTest {
         // when
         Object actual = target.request("data");
 
-        // then
+        // thensdf
         assertEquals("data from adaptee", actual);
         verify(adaptee).specificRequest("data");
     }
